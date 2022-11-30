@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.light {
+    --mainColor: #aac4ff;
+    --hoverColor: #b1b2ff;
+    --backgroundColor: #eee;
+    --darkOne: #404258;
+    --darkTwo: #474e68;
+    --lightOne: #919191;
+    --lightTwo: #8b8b8b;
+    --buyOne: #676c58;
+    --buyTwo: #888f75;
+    --image: url("assets/skull.png");
+}
+
+.dark {
+    --mainColor: #aac4ff;
+    --hoverColor: #b1b2ff;
+    --backgroundColor: #192e3a;
+    --darkOne: #f3f3f3;
+    --darkTwo: #fff;
+    --lightOne: #ccc;
+    --lightTwo: #e7e3e3;
+    --buyOne: #a5c9ca;
+    --buyTwo: #e7f6f2;
+    --image: url("assets/skull-white-2.png");
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--backgroundColor);
+
+
+}
+
+.stop-scrolling {
+    height: 100;
+    overflow: hidden;
+}
+
+img {
+    width: 100%
+}
+
+.big-wrapper {
+    padding: 1.7rem 0 2rem;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    /* background-color: var(--backgroundColor); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo img {
+    width: 190px;
+    margin-right: 0.6rem;
+    margin-top: -0.1rem;
+    content: var(--image);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.big-wrapper .container {
+    max-width: 85rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    z-index: 10;
+    position: relative;
+}
+
+header {
+    position: relative;
+    z-index: 70;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay {
+    display: none;
+}
+
+.links {
+    box-shadow: none;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.links a {
+    color: var(--lightTwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.links a:hover {
+    color: var(--lightOne);
+    box-shadow: none;
+}
+
+.signin {
+    color: var(--buyOne) !important;
+    border: var(--buyOne) solid;
+    border-radius: 15px;
+    padding: 3px 10px;
+    font-weight: 600;
+}
+
+.signin:hover {
+    color: var(--buyTwo) !important;
+    border-color: var(--buyTwo);
+}
+
+.buy_btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: #fff !important;
+    background-color: #3177B3;
+    border-radius: 16px;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.cta {
+    margin-top: 15px;
+}
+
+.carousel {
+    /* box-shadow: 0 0 2px 2px  rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    transform: translate(27%, 20px);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform .4s linear;
+    transform: translateX(0);
+}
+
+.carousel-inner img {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+}
+
+.showcase .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.large-title {
+    font-size: 1.4rem;
+    font-family: 'Black Ops One', cursive;
+    color: var(--darkOne);
+    text-transform: capitalize;
+}
+
+.text {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--darkOne);
+}
+
+.toggle-btn {
+    display: inline-block;
+    border: none;
+    background: var(--darkTwo);
+    color: var(--backgroundColor);
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle-btn i {
+    line-height: 40px;
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(35deg, #7ee8fa, #eec0c6);
+}
+
+.toggle-btn:active {
+    outline: none;
+    border: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu .bar {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    border-radius: 3px;
+    transition: 0.5s;
+    background-color: var(--darkTwo);
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkTwo);
+    transition: 0.5s;
+}
+
+.bar::before {
+    transform: translateY(-8px);
+}
+
+.bar::after {
+    transform: translateY(8px);
+}
+
+.big-wrapper.active .hamburger-menu .bar {
+    background-color: transparent;
+}
+
+.big-wrapper.active .bar::before {
+    transform: translate(0) rotate(-45deg);
+}
+
+.big-wrapper.active .bar::after {
+    transform: translate(0) rotate(45deg);
+}
+
+.big-wrapper.light .toggle-btn i:last-child {
+    display: none;
+}
+
+.big-wrapper.light .toggle-btn i:first-child {
+    display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:last-child {
+    display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:first-child {
+    display: none;
+    ;
+}
+
+.shape {
+    position: absolute;
+    z-index: 0;
+    opacity: 20%;
+    bottom: -648px;
+    left: -648px;
+    scale: 65%
+}
+
+/* .big-circle {
+    scale: 60%;
+    left: 351px;
+    bottom: -348px;
+    transition: 0.3s;
+}
+
+.small-circle {
+    scale: 65%;
+    left: -648px;
+    bottom: -643px;
+    transition: 0.3s;
+} */
+
+.copy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    animation: appear 1s 1 both;
+}
+
+@keyframes appear {
+    0% {
+        clip-path: circle(30% at -25% -25%);
+    }
+
+    100% {
+        clip-path: circle(150% at 0 0);
+    }
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 870px) {
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        max-width: 450px;
+        width: 100%;
+        height: 100%;
+        background-color: #3177B3;
+        z-index: 95;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+
+
+    .links a {
+        color: #fff;
+        margin-left: 0;
+        padding: 2rem 0;
+    }
+
+    .links .signin {
+        border: none;
+        color: #bbe1fa;
+    }
+
+    .overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .big-wrapper.active .links {
+        transform: translateX(0);
+        box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+
+    }
+
+    .big-wrapper.active .overlay {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .showcase .container {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 2rem;
+
+    }
+
+    .carousel {
+        width: 100%;
+        height: 100%;
+        transform: none;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 2rem;
+        scale: 70%
+    }
+
+    .showcase {
+        padding: 2.5rem 0;
+        max-width: 700px;
+        max-height: 700px;
+        margin: 0 auto;
+    }
+
+
+    .small-circle {
+        scale: 85%;
+        left: -321px;
+        bottom: -320px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .big-title {
+        font-size: 0.9rem;
+    }
+
+    .text {
+        margin: 1.1rem 0 1.5rem;
+    }
+
+    .showcase .btn {
+        font-size: 0.8rem;
+    }
+
+    .shape {
+        scale: 15%;
+        left: 100px;
+        bottom: 100px;
+    }
+}
