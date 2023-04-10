@@ -1,17 +1,19 @@
-$('.carousel').carousel({
-  interval: 2000
-})
+// $('.carousel').carousel({
+//   interval: 2000
+// })
 
 var toggle;
 var wrapper;
 var hamburger;
-const main = document.querySelector("main");
+var i=1;
 
-function declare(){
-    toggle = document.querySelector(".toggle-btn");
-    wrapper = document.querySelector(".big-wrapper");
-    hamburger = document.querySelector(".hamburger-menu");
+function declare() {
+  toggle = document.querySelector(".toggle-btn");
+  wrapper = document.querySelector(".big-wrapper");
+  hamburger = document.querySelector(".hamburger-menu");
 }
+
+const main = document.querySelector("main");
 
 declare();
 let dark = false;
@@ -33,7 +35,7 @@ function toggleAnimation() {
   document.body.classList.add("stop-scrolling");
 
   clone.addEventListener("animationend", () => {
-      document.body.classList.remove("stop-scrolling");
+    document.body.classList.remove("stop-scrolling");
     wrapper.remove();
     clone.classList.remove("copy");
 
@@ -52,8 +54,21 @@ function events() {
 
 events();
 
+var images = ["assets/brown-and-white.png", "assets/cemo.png", "assets/Untitled-1.png", "assets/whitey.png"];
 
 
+function slideshow(){
+  var carouselImg = document.getElementById("carousel");
+  carouselImg.src = images[i];
+  if(i<images.length-1){
+    i++;
+  }
+  else{
+    i=0;
+  }
+}
+
+window.onload = setInterval(slideshow, 3000);
 
 
 
