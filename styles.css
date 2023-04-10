@@ -304,20 +304,6 @@ carousel {
     scale: 65%
 }
 
-/* .big-circle {
-    scale: 60%;
-    left: 351px;
-    bottom: -348px;
-    transition: 0.3s;
-}
-
-.small-circle {
-    scale: 65%;
-    left: -648px;
-    bottom: -643px;
-    transition: 0.3s;
-} */
-
 .copy {
     position: absolute;
     top: 0;
@@ -338,7 +324,7 @@ carousel {
 
 /* responsiveness */
 
-/* @media screen and (max-width: 870px) {
+@media screen and (max-width: 870px) {
 
     .hamburger-menu {
         display: flex;
@@ -429,15 +415,15 @@ carousel {
         left: -321px;
         bottom: -320px;
     }
-} */
+}
 
-/* @media screen and (max-width: 470px) {
+@media screen and (max-width: 470px) {
     .container {
         padding: 0 1.5rem;
     }
 
-    .big-title {
-        font-size: 0.9rem;
+    .large-title {
+        font-size: 0.5rem;
     }
 
     .text {
@@ -453,4 +439,4 @@ carousel {
         left: 100px;
         bottom: 100px;
     }
-} */
+}
