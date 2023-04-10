@@ -1,7 +1,3 @@
-// $('.carousel').carousel({
-//   interval: 2000
-// })
-
 var toggle;
 var wrapper;
 var hamburger;
