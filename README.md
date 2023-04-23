@@ -21,7 +21,7 @@ To switch between light and dark modes, click on the theme switch button located
 
 Or alterenatively use this link to view the website hosted via Github Pages: [Responsive Landing Page](https://aviralmehrotra.github.io/Responsive-Landing-Page/)
 
-##Technologies Used
+## Technologies Used
 
 This landing page was created using the following technologies:
 
