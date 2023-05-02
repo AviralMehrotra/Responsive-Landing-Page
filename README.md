@@ -17,7 +17,7 @@ The landing page includes the following features:
 
 To use this landing page template, simply download or clone this repository to your local machine and open the `index.html` file in your web browser.
 
-To switch between light and dark modes, click on the theme switch button located at the top right corner of the page.
+To switch between light and dark modes, click on the theme switch button located at the bottom left corner of the page.
 
 Or alterenatively use this link to view the website hosted via Github Pages: [Responsive Landing Page](https://aviralmehrotra.github.io/Responsive-Landing-Page/)
 
